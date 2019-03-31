@@ -901,7 +901,7 @@ ul {
   }
 
 
-  #colorContainer {
+.colorContainer {
    float: left;
    list-style: inline;
    list-style-type: none;
@@ -918,7 +918,7 @@ ul {
    font-style: normal;
  }
 
- #colorList {
+.colorList {
 
    word-wrap: break-word;
    list-style-type: none;

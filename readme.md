@@ -1,14 +1,15 @@
 # [ChangeLog]
 
 ### Code references
-functions in `index.html`: 
+all functions in `index.html`: 
 
-#### divs with classes (didn't work)
+#### Divs with classes (didn't work)
+###Red Color Container
 ```
 
 56	 <h3>Your Selected Colors</h3>
 		<ul id="special">
-		 <div class="colorContainer"></div>
+		 <div class="colorContainer" id="red"></div>
 		</ul>
 
 ```
@@ -67,7 +68,7 @@ functions in `index.html`:
 
 #### HTML code
 ```
-      <div id="guideTitle">Color Guide</div>
+<div id="guideTitle">Color Guide</div>
 
           <a href="javascript:void(0)" class="color-info" id="red-info">Red <span id="arrow">&#9660;</span></a>
             <div class="color-ref" id="red" style="display: none;">
@@ -94,12 +95,29 @@ functions in `index.html`:
 
               <h3>Your Selected Colors</h3>
                 <ul id="special">
-                  <div id="colorContainer"></div>
+                   <div class="colorContainer" id="red"></div>
                 </ul>
 
-	</div>
+</div>
 ```
-### References
-We referenced [fritter](https://github.com/beakerbrowser/fritter)'s datastructure as a model for our network. 
+### If conditional placement? (Broke code though)
 
+```
+538		$('body').on('click','#red-info', function(){
+		  $('#red').toggle();
+
+		})
+
+```
+
+or place here?
+```
+    
+694       colorContainer.insertAdjacentHTML("beforeend", `
+            <li id="colorList"> 
+                <a href="./posts/post-${postAndArchive.post.timestamp}.json" id="hexColorLink" class=${showColors} style="color:${postAndArchive.post.colors};">${postAndArchive.post.colors}</a>
+            </li>
+            `)
+
+```
 
