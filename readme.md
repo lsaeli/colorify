@@ -4,7 +4,7 @@
 all functions in `index.html`: 
 
 #### Divs with classes (didn't work)
-###Red Color Container
+### ex: Red Color Container
 ```
 
 56	 <h3>Your Selected Colors</h3>
@@ -121,3 +121,42 @@ or place here?
 
 ```
 
+
+### RGB code from earlier 
+
+```
+
+729           rgb(255, 0, 0)
+			  if (r > g && r > b){
+			    // red value
+			  }else if( g > r && g > b){
+			    // green
+			  }else if( b > r && b > g){
+			    // blue
+			  }
+
+```
+
+
+#### Should code look something like this?
+
+### Javascript
+```
+  
+    $('.box').each(function(i){
+        var color = $(this).css('background-color');
+        if (color == 'rgb(0, 0, 255)' || color == 'blue') //=='blue' <- IE hack
+            console.log("div " + i + " is blue!\nColor detected: " + color);
+    });
+
+```
+
+
+### HTML
+```
+  
+		<div class="box" style="background-color:blue;">div 0</div>
+		<div class="box" style="background-color:blue;">div 1</div>
+		<div class="box">div 2</div>
+
+```
